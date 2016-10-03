@@ -1,0 +1,56 @@
+/* GENERAL STYLE 
+**************************************************************/
+body{color:#283045; font-family:verdana, arial; font-size:14px; line-height:20px; margin:0; padding:0;}
+a,a:link{text-decoration:none; color:#008c9b;}
+a:hover{text-decoration:none; color:#283045;}
+a:focus{outline:0px solid;}
+img{border:0px solid; width:100%;}
+form,ul,ol,h1,h2,h3,h4,h5,h6{padding:0; margin:0;}
+.contentarea{max-width: 1140px; margin: auto;}
+.navbar-inverse{margin: 0;background: #283045;}
+.dlheader a.dllogo{height:46px; width:167px;display: block;}
+.dlheader{background:#1a5092;min-height:65px; padding-top: 10px;}
+.navbar-fixed-top{position: inherit;}
+.navbar .consolebutt{float: right; padding-top: 8px;}
+.navbar .consolebutt .btn{font-weight: bold;}
+.introcontentarea{background:#171c2b url("../images/landingiconbg.png") no-repeat center top;color: #fff;}
+.introcontentarea .introinfoarea{padding-bottom:20px;}
+.introcontentarea .introconpadd{padding: 0 15px;}
+.introcontentarea .inticonsarea{height: 142px; padding-top: 20px;}
+.introcontentarea .inticonsarea em{background:url("../images/icon_landingpage.png") no-repeat 0 0; display:block; height:111px; margin:0 auto; width:100px;}
+.introcontentarea .inticonsarea em.latestnews{background-position: 0 0;}
+.introcontentarea .inticonsarea em.newfeatures{background-position: 0px -145px;}
+.introcontentarea .inticonsarea em.gettingstarted{background-position: 0 100%;}
+.introcontentarea .inticons_title{font-size: 22px; height: 38px;padding-top: 8px; line-height:normal; text-align: center;}
+.introcontentarea .inticons_content{padding-top: 15px; text-align: justify; min-height:180px;}
+.introcontentarea a.button_border{border:1px solid #fff;padding:8px 30px 10px; color:#fff;display:table;margin:20px auto 0; border-radius:5px;}
+.introcontentarea a.button_border:hover{background: #1c2234;}
+#dlfooter{background:#141823;padding:10px 0 15px;text-align: center;}
+#dlfooter ul{display: table; margin: 0 auto; padding-bottom:15px; font-size: 13px;}
+#dlfooter ul li{display:inline-block; border-left: 1px solid #666; white-space: nowrap;}
+#dlfooter ul li:first-child{border-left: 0px solid #666;}
+#dlfooter ul li a{ color: #c0c1c4; text-decoration: none; padding: 0 12px;}
+#dlfooter ul li a:hover{ color: #fff;}
+#dlfooter .footerlogo{width:128px; margin: 0 auto;}
+.navbar-inverse .navbar-toggle{border-color: #999;}
+/*.sliderarea{padding-top:20px;}*/
+.swipe{overflow: hidden;position: relative;width: 100%;height:auto;}
+.swipe-wrap {overflow: hidden;position: relative;}
+.swipe-wrap > .sliderrow{float: left;width: 100%;position: relative;}
+.swipe .nav {position: absolute;width:60px;height:35px;z-index: 10;text-align: center;line-height:32px;display: inline-block;color: #fff;top: 45%;cursor: pointer;background-color: rgba(0,0,0,0.5)}
+.swipe .nav.next{right:0;-webkit-border-radius: 3px 0 0 3px;border-radius: 3px 0 0 3px;}
+.swipe .nav.prev{-webkit-border-radius: 0 3px 3px 0;border-radius: 0 3px 3px 0;}
+.dlsearcharea .dlsearch{float: right; padding-top: 10px;}
+.dlsearch .searcharea{border-bottom: 1px solid #31629d;padding-right: 30px;}
+.dlsearch .searcharea .srcinput{background:none;border: 0 solid #4aacd6;color: #4aacd6;padding: 5px 0; width: 100%;}
+.dlsearch .searcharea .srcbutt {background:url("../images/icon_search.png") no-repeat center center;border: 0 solid;cursor: pointer;float: right;height: 28px;width: 28px; position: absolute; top:12px; right: 16px; z-index: 1;}
+.dlsearcharea a.mobsearch{background:url("../images/icon_searchmob.png") no-repeat 0 0; height: 30px; width: 30px; display: block; float: right;position: relative;z-index: 1; margin:8px 15px 0 0; display: none;}
+@media (max-width:767px){
+.navbar .consolebutt{float: left; padding-top: 8px;}
+.swipe-wrap .sliderrow img{height: 150%;}
+.introcontentarea{background:none;}
+.introcontentarea .introinfoarea{background:#171c2b url("../images/landingiconbg.png") no-repeat center top;}
+.dlsearcharea .dlsearch{float: none; display: none; padding-top:10px;padding-bottom:10px; margin-top:5px;}
+.dlsearcharea a.mobsearch{display: block;}
+.dlsearch .searcharea{border-top: 1px solid #31629d;}
+}

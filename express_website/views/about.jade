@@ -1,0 +1,120 @@
+extends layout
+
+block content
+	.container
+		h1= title
+		p Welcome to #{title}
+
+		- myName = "Palash"
+		h4 my name is #{myName}
+		p 25 * 5 = #{25 * 5}
+
+		//- **************************
+		- heroes = ['Super Man', 'Spider Man', 'Bat Man']
+		ul
+			li.items: a(href="#", class="links") #{heroes [0]}
+			li.items: a(href="#", class="links") #{heroes [1]}
+			li.items: a(href="#", class="links") #{heroes [2]}
+
+		//- **************************
+		- bq = "blockquote"
+		#{bq} bad idea.
+
+		//- **************************
+		- batman = "Attributes applied using &attributes are not automatically escaped. You must be sure to sanitize any user inputs to avoid cross-site scripting (XSS). This is done for you if you are passing in attributes from a mixin call."
+		p.batmanclass= batman
+
+		//- **************************
+		- fnI = {"type":"input", "name":"user"}
+		span First Name : 
+		input(type=fnI.type, name=fnI.name)
+
+		br
+		br
+		//- **************************
+		- someInfo = "<i>What is your name?</i>"
+		p!= someInfo
+		p !{someInfo}
+
+		//- **************************
+		- date = new Date()
+		- hour = date.getHours()
+
+		- if ((hour >= 6) && (hour <= 17)){
+			h3 Day Time
+		- } else {
+			h3 Night Time
+		- }
+
+		//- **************************
+		- age = 18
+
+		if ((age >= 16) && (age > 18))
+			h3 You can drive
+		else if age >= 18
+			h3 You can Drive and Vote
+		else
+			h3 You can wait up to 16
+
+		unless age >= 16
+			h3 You will drive at 16
+		else
+			h3 You can drive
+
+		//- **************************
+		- daytime = (((hour >= 6) && (hour <= 17)) ? "Day Time" : "Night Time")
+			h3 #{daytime}
+
+		//- **************************
+		- name = "Palash"
+		case name
+			when "Rahim"
+				h3 Hi Rahim
+			when "Palash"
+				h3 Hi Palash
+			default
+				h3 Hi You
+		script.
+			console.log("hallo Jade")
+
+		//- **************************
+		- abc = ["Ram", "Shyam", "Jadu", "Madhu"]
+		ul
+			- for (i = 0; i < abc.length; i++){
+				li= abc[i]
+			- }
+		ul
+			each xy in abc
+				li= xy
+
+		//- **************************
+		- i = 0
+		ul
+			while i <= 15
+				li= i
+				- i++;
+
+		//- **************************
+		mixin fmPlayer (name, pos, team)
+			li #{name} is the #{pos} for the team #{team}
+		ul.playes
+			+fmPlayer("Rabi Kumar", "Stiker", "East Bangal")
+			+fmPlayer("Sani Kumar", "Quarter Back", "Mahan Bagan")
+			+fmPlayer("Mangal Kumar", "Center Forward", "Eaden")
+
+		//- **************************
+		mixin copyr
+			| &#169;
+
+		p 
+			+copyr  
+			|  2016
+
+		//- **************************
+		mixin makeList()
+			ul
+				- args = Array.prototype.slice.call(arguments);
+				for item in args
+					li= item
+		+makeList('Banana', 'Orange', 'Lemon', 'Apple', 'Mango')
+
